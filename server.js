@@ -77,8 +77,8 @@ app.post("/send-mail", async (req, res) => {
 
 // Endpoint to download resume
 app.get("/download-resume", (req, res) => {
-  const resumePath = path.join(__dirname, "public", "resume.pdf"); // Path to the resume file
-  res.download(resumePath, "My_Resume.pdf", (err) => {
+  const resumePath = path.join(__dirname, "public", "Anirban_Goswami.pdf"); // Path to the resume file
+  res.download(resumePath, "Anirban_Goswami.pdf", (err) => {
     if (err) {
       console.error("Error sending file:", err);
       res.status(500).send("Failed to download resume.");
