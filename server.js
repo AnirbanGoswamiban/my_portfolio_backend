@@ -14,8 +14,7 @@ app.use(cors())
 app.use(bodyParser.json());
 
 // Serve static files (for the resume and other assets)
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/public', express.static(path.join(__dirname, 'public')));
 // Endpoint to test server
 app.get("/test", (req, res) => {
   res.send("ok");
